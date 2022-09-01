@@ -8,9 +8,9 @@
 import UIKit
 
 class OWForecastCell: UITableViewCell {
-    @IBOutlet weak var dateLbl: UILabel!
-    @IBOutlet weak var tempMinLbl: UILabel!
-    @IBOutlet weak var tempMaxLbl: UILabel!
+    @IBOutlet private weak var dateLbl: UILabel!
+    @IBOutlet private weak var tempMinLbl: UILabel!
+    @IBOutlet private weak var tempMaxLbl: UILabel!
     
     func setup(_ forecast: OWForecast) {
         dateLbl.text = forecast.dt_txt.toDateShortDay

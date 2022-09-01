@@ -9,9 +9,9 @@ import UIKit
 
 class CitiesController: UIViewController {
     // MARK: - Outlets
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var unitBtn: UIBarButtonItem!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var unitBtn: UIBarButtonItem!
     
     // MARK: - Public props
     let cities = OWStorage.shared.cities

@@ -10,7 +10,7 @@ import MapKit
 
 class MapController: UIViewController {
     // MARK: - Outlets
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet private weak var mapView: MKMapView!
     
     // MARK: - Public props
     var current: OWCurrent!

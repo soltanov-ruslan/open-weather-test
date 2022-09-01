@@ -9,11 +9,11 @@ import UIKit
 import AlamofireImage
 
 class OWWeatherCell: UITableViewCell {
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var descrLbl: UILabel!
-    @IBOutlet weak var tempMinLbl: UILabel!
-    @IBOutlet weak var tempMaxLbl: UILabel!
-    @IBOutlet weak var iconImg: UIImageView!
+    @IBOutlet private weak var nameLbl: UILabel!
+    @IBOutlet private weak var descrLbl: UILabel!
+    @IBOutlet private weak var tempMinLbl: UILabel!
+    @IBOutlet private weak var tempMaxLbl: UILabel!
+    @IBOutlet private weak var iconImg: UIImageView!
     
     var clickedMap: (() -> Void)?
     

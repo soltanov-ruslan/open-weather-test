@@ -9,10 +9,10 @@ import UIKit
 
 class CityController: UIViewController {
     // MARK: - Outlets
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var iconImg: UIImageView!
-    @IBOutlet weak var descrLbl: UILabel!
-    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var iconImg: UIImageView!
+    @IBOutlet private weak var descrLbl: UILabel!
+    @IBOutlet private weak var dateLbl: UILabel!
     
     // MARK: - Public props
     var current: OWCurrent!
