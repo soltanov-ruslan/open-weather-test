@@ -8,13 +8,20 @@
 import UIKit
 
 class CityController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var descrLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     
+    // MARK: - Public props
     var current: OWCurrent!
+    
+    // MARK: - Private props
     private var data: [OWForecast] = []
+    private var networker = OWNetworker()
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +30,10 @@ class CityController: UIViewController {
 
         requestForecast()
     }
-    
+}
+
+// MARK: - Private methods
+extension CityController {
     // MARK: - UI
     
     private func setupUI() {
@@ -38,7 +48,7 @@ class CityController: UIViewController {
     // MARK: - Data
     
     private func requestForecast() {
-        OWNetworker().getForecast(current.id) { response in
+        networker.getForecast(current.id) { response in
             print("OW forecast success", response.list.count)
             self.data = response.days
             self.tableView.reloadData()
@@ -46,8 +56,10 @@ class CityController: UIViewController {
             print("OW forecast failure", error)
         }
     }
+    
 }
 
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension CityController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count

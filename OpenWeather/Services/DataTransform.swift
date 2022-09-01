@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DataTransform {
+final class DataTransform {
     static func formatted(timestamp: Int, to: String) -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
         let formatter = DateFormatter()

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Router {
+final class Router {
     static func showCity(_ from: UIViewController, current: OWCurrent) {
         let vc: CityController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CityController") as! CityController
         vc.current = current

@@ -8,14 +8,21 @@
 import UIKit
 
 class CitiesController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var unitBtn: UIBarButtonItem!
     
+    // MARK: - Public props
     let cities = OWStorage.shared.cities
+    
+    // MARK: - Private props
     private var response: [OWCurrent] = []
     private var data: [OWCurrent] = []
+    private var networker = OWNetworker()
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCell("OWWeatherCell")
@@ -23,7 +30,10 @@ class CitiesController: UIViewController {
         
         requestCities()
     }
-    
+}
+
+// MARK: - Private methods
+extension CitiesController {
     // MARK: - UI
     
     private func refreshUI() {
@@ -33,7 +43,7 @@ class CitiesController: UIViewController {
     // MARK: - Data
     
     private func requestCities() {
-        OWNetworker().getGroup(cities) { response in
+        networker.getGroup(cities) { response in
             print("OW group success", response.list.count)
             self.response = response.list
             self.refreshData()
@@ -58,6 +68,7 @@ class CitiesController: UIViewController {
         refreshUI()
         requestCities()
     }
+    
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate

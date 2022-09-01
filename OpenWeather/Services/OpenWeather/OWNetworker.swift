@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class OWNetworker: SharedNetworker {
+final class OWNetworker: SharedNetworker {
     func getGroup(_ ids: [Int], success: @escaping (OWGroupResponse) -> Void, failure: @escaping (String) -> Void) {
         let parameters: Parameters = ["appid": OWConstants.key, "units": OWStorage.shared.unit.rawValue, "id": ids.map { String($0) }.joined(separator: ",")]
         request(OWConstants.url.group, parameters: parameters, success: success, failure: failure)

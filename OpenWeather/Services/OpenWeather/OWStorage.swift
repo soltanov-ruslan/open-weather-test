@@ -7,7 +7,7 @@
 
 import Foundation
 
-class OWStorage {
+final class OWStorage {
     static let shared = OWStorage()
     
     let cities = [

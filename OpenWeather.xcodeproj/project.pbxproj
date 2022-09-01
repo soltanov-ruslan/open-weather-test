@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		44D80C8C28BFC8C400E22F1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D80C8B28BFC8C400E22F1B /* AppDelegate.swift */; };
-		44D80C8E28BFC8C400E22F1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D80C8D28BFC8C400E22F1B /* SceneDelegate.swift */; };
 		44D80C9028BFC8C400E22F1B /* CitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D80C8F28BFC8C400E22F1B /* CitiesController.swift */; };
 		44D80C9328BFC8C400E22F1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D80C9128BFC8C400E22F1B /* Main.storyboard */; };
 		44D80C9528BFC8C900E22F1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D80C9428BFC8C900E22F1B /* Assets.xcassets */; };
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		44D80C8828BFC8C400E22F1B /* OpenWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D80C8B28BFC8C400E22F1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44D80C8D28BFC8C400E22F1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		44D80C8F28BFC8C400E22F1B /* CitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesController.swift; sourceTree = "<group>"; };
 		44D80C9228BFC8C400E22F1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44D80C9428BFC8C900E22F1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				44D80C8B28BFC8C400E22F1B /* AppDelegate.swift */,
-				44D80C8D28BFC8C400E22F1B /* SceneDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -427,7 +424,6 @@
 				44D80CDE28BFD6E800E22F1B /* UITableView+Extensions.swift in Sources */,
 				44D80CC128BFC9CE00E22F1B /* OWNetworker.swift in Sources */,
 				44E85A6D28C0903A00EBFC5A /* MapController.swift in Sources */,
-				44D80C8E28BFC8C400E22F1B /* SceneDelegate.swift in Sources */,
 				44DD2D0228BFDEDA00E9D84B /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

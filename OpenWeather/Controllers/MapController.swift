@@ -9,15 +9,22 @@ import UIKit
 import MapKit
 
 class MapController: UIViewController {
+    // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView!
     
+    // MARK: - Public props
     var current: OWCurrent!
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-    
+}
+
+// MARK: - Private methods
+extension MapController {
     // MARK: - UI
     
     private func setupUI() {

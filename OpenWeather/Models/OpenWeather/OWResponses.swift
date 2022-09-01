@@ -30,6 +30,7 @@ struct OWForecast: Codable {
     var main: OWMain
 }
 
+// MARK: - Computed props
 extension OWForecastResponse {
     var days: [OWForecast] {
         var ds: [OWForecast] = []

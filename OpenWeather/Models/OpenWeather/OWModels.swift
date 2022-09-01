@@ -23,6 +23,7 @@ struct OWCoord: Codable {
     var lat: Double
 }
 
+// MARK: - Computed props
 extension OWWeather {
     var iconUrl: URL { URL(string: OWConstants.iconPath(icon))! }
 }
